@@ -12,6 +12,7 @@ engine = create_engine(url=os.getenv("DATABASE_URL"), echo=True, connect_args=co
 def init_db() -> None:
 
     # Import models
+    from app.models.product import Products, ProductsMoviments
 
     SQLModel.metadata.create_all(engine)
 
